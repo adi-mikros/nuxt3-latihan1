@@ -1,0 +1,51 @@
+<template>
+    <div>
+        <button class="btn btn-success" @click="getData()">Ambil Data</button>
+        <h5>{{ judul }}</h5>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-sm-3" v-for="(x, index) in dataprodukx" :key="index">
+                    <NuxtLink :to="'/produk/'+x.KodeProduk">
+                        <div class="card">
+                            <div class="card-body">
+                                {{ x.Nama }} - {{ x.KodeProduk }}
+                            </div>
+                            <div class="card-footer">
+                                {{ x.Harga }}
+                            </div>
+                        </div>
+                    </NuxtLink>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</template>
+
+<script>
+import axios from 'axios';
+export default {
+    data() {
+        return {
+            judul: "Daftar Produkxxxx",
+            dataprodukx: {},
+        }
+    },
+    mounted() {
+        this.getData();
+    },
+    methods: {
+        async getData() {
+            let res = await axios.get("https://api-smnmart.biznizo.my.id/android/produksemuaurut");
+            console.log(res.data);
+            this.dataprodukx = res.data;
+
+        }
+    }
+}
+</script>
+
+<style></style>

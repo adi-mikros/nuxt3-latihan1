@@ -20,6 +20,12 @@
                     <li class="nav-item">
                         <NuxtLink class="nav-link" to="/kontak">Kontak</NuxtLink>
                     </li>
+                    <li class="nav-item">
+                        <NuxtLink class="nav-link" to="/daftar">Daftar</NuxtLink>
+                    </li>
+                    <li class="nav-item">
+                        <NuxtLink class="nav-link" to="/produk">Produk</NuxtLink>
+                    </li>
                 
                 </ul>
             </div>

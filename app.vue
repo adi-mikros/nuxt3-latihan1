@@ -1,28 +1,41 @@
 <template>
   <div>
 
-   <AppHeader/>
+    {{ judul }}
 
-    <NuxtPage/>
-   
-   <AppFooter/>
+    <AppHeader />
+
+    <NuxtPage />
+
+    <AppFooter />
 
   </div>
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      judul: "halo bro!",
+    };
+  },
+}
+</script>
+
+
+<script setup>
+
 
 useHead({
-  title:"LATIHAN1",
-  link:[
+  title: "LATIHAN1",
+  link: [
     {
-      rel : "stylesheet",
-      href : "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel: "stylesheet",
+      href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     }, //css bootstrap 5
     {
-      src : "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
+      src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js",
     }
   ]
 })
 </script>
-
